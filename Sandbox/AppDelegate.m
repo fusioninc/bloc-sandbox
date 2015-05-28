@@ -17,7 +17,44 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    NSMutableString *modifiableStatement = [NSMutableString stringWithString:@"Pluto is a planet in our solar system."];
+    [modifiableStatement appendString:@" It *used* to be considered a major planet."];
+    NSLog(@"%@", modifiableStatement);
+    
+    
+//    NSMutableString *modifiableStatement = [@"Pluto is a planet in our solar system." mutableCopy];
+//    NSRange planetRange = [modifiableStatement rangeOfString:@"planet"];
+//    [modifiableStatement replaceCharactersInRange:planetRange withString:@"large object in the Kuiper belt"];
+//    NSLog(@"%@", modifiableStatement);
+    
+//    NSString *beatlesLyric = @"All you need is...";
+//    NSRange loveRange = [beatlesLyric rangeOfString:@"love"];
+//    NSLog(@"Location of 'love': %ld", loveRange.location);
+//    NSLog(@"NSNotFound: %ld", NSNotFound);
+    
+    
+//    NSString *wGP = @"\"with great power, comes great responsbility.\"";
+//    NSLog(@"Uncle Ben always said, %@", wGP);
+//    
+//    NSString *plutoStatement = @"Pluto is a planet in our solar system.";
+//    NSRange planetRange = [plutoStatement rangeOfString:@"planet"];
+//    NSString *technicallyCorrectStatement = [plutoStatement stringByReplacingCharactersInRange:planetRange withString:[@"large object in the Kuiper belt"]];
+//    NSLog(@"%@", technicallyCorrectStatement);
+    
+    
+//    NSRange planetRange = [plutoStatement rangeOfString:@"planET" options:NSCaseInsensitiveSearch];
+//    NSLog(@"Planet Range is: %@", NSStringFromRange(planetRange));
+
+    
+    
+//    NSRange planetRange = [plutoStatement rangeOfString:@"planet"];
+//    NSLog(@"planetRange starting point: %lu", (unsigned long) planetRange.location);
+//    NSLog(@"planetRange length: %lu", (unsigned long) planetRange.length);
+    
+    
     return YES;
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
