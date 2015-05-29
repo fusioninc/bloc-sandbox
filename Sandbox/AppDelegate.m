@@ -18,40 +18,71 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
-    NSMutableString *modifiableStatement = [NSMutableString stringWithString:@"Pluto is a planet in our solar system."];
-    [modifiableStatement appendString:@" It *used* to be considered a major planet."];
-    NSLog(@"%@", modifiableStatement);
+
+    NSString *someString;
+    BOOL someStringIsNil = !someString;
+    NSLog(@"Is someString nil? %@", someStringIsNil ? @"Yes" : @"No");
+    //!someObject is shorthand for someObject == nil
+    
+//    NSString *someString;
+//    BOOL someStringExists = someString != nil;
+//    NSLog(@"Does some string exist? %@", someStringExists ? @"Yes" : @"No");
+    
+//    NSString *someString;
+//    NSMutableString *someMutableString = [someString mutableCopy];
+//    [someMutableString appendString:@"A Rainbow Unicorn"];
+//    NSLog(@"And our new mutable string? %@", someMutableString);
+//    //This will print null - because someString is empty, "mutableCopy" copies an empty object to someMutableString
+//    //when someMutableString appends more string, it's still because of empty object never existed.
     
     
-//    NSMutableString *modifiableStatement = [@"Pluto is a planet in our solar system." mutableCopy];
-//    NSRange planetRange = [modifiableStatement rangeOfString:@"planet"];
-//    [modifiableStatement replaceCharactersInRange:planetRange withString:@"large object in the Kuiper belt"];
-//    NSLog(@"%@", modifiableStatement);
+//    NSInteger someInt = 0;
+//    NSString *someString;
+//    NSLog(@"What's our integer? %ld", (long)someInt);
+//    NSLog(@"And our string? %@", someString);
     
-//    NSString *beatlesLyric = @"All you need is...";
-//    NSRange loveRange = [beatlesLyric rangeOfString:@"love"];
-//    NSLog(@"Location of 'love': %ld", loveRange.location);
-//    NSLog(@"NSNotFound: %ld", NSNotFound);
+//    BOOL not14LessThan5 = !(14 < 5);
+//    NSLog(@"Is the opposite of 14 less than 5 true? %@", not14LessThan5 ? @"Yes" : @"No");
     
+//    NSInteger twelve = 12;
+//    NSInteger thirteen = 13;
+//    NSLog(@"Is 12 greater than 13? %@", twelve > thirteen ? @"Yes" : @"No");
+//    NSLog(@"Is 12 less than 13? %@", twelve < thirteen ? @"Yes" : @"No");
+//    NSLog(@"Is 13 greater than or equal to 12? %@", thirteen >= twelve ? @"Yes" : @"No");
+//    NSLog(@"Is 13 less than or equal to 12? %@", thirteen <= twelve ? @"Yes" : @"No");
+//    NSLog(@"Is 12 different than 13? %@", twelve != thirteen ? @"Yes" : @"No");
     
-//    NSString *wGP = @"\"with great power, comes great responsbility.\"";
-//    NSLog(@"Uncle Ben always said, %@", wGP);
+//    NSNumber *fiveA = [NSNumber numberWithFloat:5.0];
+//    NSNumber *fiveB = [NSNumber numberWithFloat:5.0];
 //    
-//    NSString *plutoStatement = @"Pluto is a planet in our solar system.";
-//    NSRange planetRange = [plutoStatement rangeOfString:@"planet"];
-//    NSString *technicallyCorrectStatement = [plutoStatement stringByReplacingCharactersInRange:planetRange withString:[@"large object in the Kuiper belt"]];
-//    NSLog(@"%@", technicallyCorrectStatement);
+//    BOOL areTheyEqual = [fiveA isEqualToNumber:fiveB];
+//    NSLog(@"Are they equal? %@", areTheyEqual ? @"Yes" : @"No");
     
     
-//    NSRange planetRange = [plutoStatement rangeOfString:@"planET" options:NSCaseInsensitiveSearch];
-//    NSLog(@"Planet Range is: %@", NSStringFromRange(planetRange));
+//    NSNumber *fiveA = [NSNumber numberWithFloat:5.0];
+//    NSNumber *fiveB = [NSNumber numberWithFloat:5.0];
+//    
+//    BOOL areTheyEqual = [fiveA isEqual:fiveB];
+//    NSLog(@"Are they equal? %@", areTheyEqual ? @"Yes" : @"No");
+    
+//    NSNumber *fiveA = [NSNumber numberWithFloat:5.0];
+//    NSNumber *fiveB = [NSNumber numberWithFloat:5.0];
+//    
+//    BOOL areTheyEqual = fiveA == fiveB;
+//    
+//    NSLog(@"Are they equal %@", areTheyEqual ? @"Yes" : @"No");
 
     
     
-//    NSRange planetRange = [plutoStatement rangeOfString:@"planet"];
-//    NSLog(@"planetRange starting point: %lu", (unsigned long) planetRange.location);
-//    NSLog(@"planetRange length: %lu", (unsigned long) planetRange.length);
+//    NSString *stringOne = @"Hello, there!";
+//    NSString *stringTwo = stringOne;
+//    BOOL areTheyEqual = stringOne == stringTwo;
+//    NSLog(@"Are they identical? %@", areTheyEqual ? @"Yes" : @"No");
     
+//    CGFloat oneThird = 1.0 / 3.0;
+//    CGFloat alsoOneThird = 1.0 / 3.0;
+//    BOOL areTheyEqual = oneThird == alsoOneThird;
+//    NSLog(@"Are they equal? %@", areTheyEqual ? @"Yes" : @"No");
     
     return YES;
     
