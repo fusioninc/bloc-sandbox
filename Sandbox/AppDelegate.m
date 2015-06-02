@@ -18,16 +18,37 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
-    [self chant];
-    [self chant];
-    [self chant];
-    [self chant];
-    [self chantPlus];
-    [self chantPlus];
-    [self chantPlus];
-    [self chantPlus];
     
-    return YES;
+    //Method is at the bottom
+    NSInteger childHeight = 130;
+    [self checkingChildHeight:childHeight]; //prints "Enjoy the ride"
+    
+    NSInteger secondChildHeight = 110;
+    [self checkingChildHeight:secondChildHeight]; //print "Beat it Kid!"
+    
+    
+//    NSInteger minimumHeight = 120;
+//    NSInteger childHeight = 130;
+//
+    
+    
+//    BOOL childIsTallEnough = (childHeight >= minimumHeight);
+//    Line 26 can be removed because of the conditional cmparison.
+
+//    if (childIsTallEnough) {
+//        NSLog(@"Enjoy the ride!");
+//    } else {
+//        NSLog(@"Beat it Kid!");
+//    }
+    
+    
+//    BOOL childIsTallEnough = NO;
+//    if (childIsTallEnough) {
+//        NSLog(@"Enjoy the Ride!");
+//    } else {
+//        NSLog(@"Beat it Kid!");
+//    }
+   return YES;
     
 }
 
@@ -60,5 +81,28 @@
 - (void)chantPlus {
     NSLog(@"The more the merrier!");
 }
+
+- (void) checkingChildHeight:(NSInteger)childHeight {
+    NSInteger minimumHeight = 120;
+    
+    NSString *message = (childHeight >= minimumHeight) ? @"Enjoy the Ride!" : @"Beat it Kid!";
+    NSLog(@"%@", message);
+}
+
+
+//- (void) checkChildHeight:(NSInteger)childHeight {
+//    NSInteger minimumHeight = 120;
+//    
+//    NSString *message;
+//    
+//    if (childHeight >= minimumHeight) {
+////        NSLog(@"Enjoy the Ride!");
+//        message = @"Enjoy the Ride!";
+//    } else {
+////        NSLog(@"Beat it Kid!");
+//        message = @"Beat it Kid!";
+//    }
+//    NSLog(@"%@", message);
+//}
 
 @end
