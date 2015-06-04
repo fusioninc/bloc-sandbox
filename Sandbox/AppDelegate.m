@@ -19,36 +19,51 @@
     // Override point for customization after application launch.
 
     
-    //Method is at the bottom
-    NSInteger childHeight = 130;
-    [self checkingChildHeight:childHeight]; //prints "Enjoy the ride"
+    //For Loop
+    NSInteger nFactorial = 1;
+    for (NSInteger n = 5; n > 1; n--) {
+        nFactorial = nFactorial * n;
+        NSLog(@"n is now: %ld", (long)n);
+    }
     
-    NSInteger secondChildHeight = 110;
-    [self checkingChildHeight:secondChildHeight]; //print "Beat it Kid!"
+    //While loops
     
-    
-//    NSInteger minimumHeight = 120;
-//    NSInteger childHeight = 130;
-//
-    
-    
-//    BOOL childIsTallEnough = (childHeight >= minimumHeight);
-//    Line 26 can be removed because of the conditional cmparison.
-
-//    if (childIsTallEnough) {
-//        NSLog(@"Enjoy the ride!");
-//    } else {
-//        NSLog(@"Beat it Kid!");
+//    NSInteger n = 5;
+//    NSInteger nFactorial = n;
+//    
+//    while (n > 1) {
+//        NSLog(@"n is now: %ld", (long)n);
+//        nFactorial = nFactorial * --n;
 //    }
+//    NSLog(@"The factorial of %ld is %ld", (long)n, (long)nFactorial);
     
     
-//    BOOL childIsTallEnough = NO;
-//    if (childIsTallEnough) {
-//        NSLog(@"Enjoy the Ride!");
-//    } else {
-//        NSLog(@"Beat it Kid!");
+//    NSInteger n = 5;
+//    NSInteger nFactorial = n;
+//    while (n > 1) {
+//        nFactorial = nFactorial * --n;
 //    }
-   return YES;
+//    NSLog(@"The factorial of %ld is %ld", (long)n, (long)nFactorial);
+//    
+    
+//    NSInteger n = 5;
+//    NSInteger nFactorial;
+//    //Find the factorial
+//    
+//    nFactorial = n;
+//        //At this point, n == 5 and nFactorial == 5
+//    nFactorial = nFactorial * --n;
+//        //The above line subtracts 1 from n, then multiplies nFactorial by the new n.
+//        //Here, n == 4 and nFactorial == 20
+//    nFactorial = nFactorial * --n;
+//        //Now n === 3 and nFactorial == 60
+//    nFactorial = nFactorial * --n;
+//        // n == 2 and nFactorial == 120
+//    nFactorial = nFactorial * --n;
+//        // n == 1 and nFactorial == 120
+//    NSLog(@"The factorial of %ld is %ld", (long) n, (long) nFactorial);
+//    
+    return YES;
     
 }
 
