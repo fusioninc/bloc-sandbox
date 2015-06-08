@@ -18,51 +18,124 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
-    
-    //For Loop
-    NSInteger nFactorial = 1;
-    for (NSInteger n = 5; n > 1; n--) {
-        nFactorial = nFactorial * n;
-        NSLog(@"n is now: %ld", (long)n);
-    }
-    
-    //While loops
-    
-//    NSInteger n = 5;
-//    NSInteger nFactorial = n;
+//    NSArray *myTodoList = [NSArray arrayWithObjects:@"Clean the house",
+//                           @"Feed the dog",
+//                           @"Take out the trash",
+//                           @"Fight crime",
+//                           nil];
 //    
-//    while (n > 1) {
-//        NSLog(@"n is now: %ld", (long)n);
-//        nFactorial = nFactorial * --n;
+//    NSLog(@"I have %ld things to do today!", myTodoList.count);
+//    NSLog(@"First thing I need to do: %@", myTodoList[0]);
+
+    
+//    NSMutableArray *myMutableTodoList = [@[@"Clean the house",
+//                                           @"Feed the dog",
+//                                           @"Take out the trash",
+//                                           @"Fight crime"] mutableCopy];
+//    
+//    //Add object to the array
+//    [myMutableTodoList addObject:@"Solve world hunger"];
+//    
+//    //Remove object from the array
+//    [myMutableTodoList removeObjectAtIndex:0];
+//    NSLog(@"First thing I need to do: %@", [myMutableTodoList objectAtIndex:0]);
+    
+//    //Sorting
+//    NSMutableArray *myMutableTodoList = [@[@"Clean the house",
+//                                           @"Feed the dog",
+//                                           @"Take out the trash",
+//                                           @"Fight crime"] mutableCopy];
+//    
+//    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:nil
+//                                                                   ascending:YES
+//                                                                    selector:@selector(localizedCaseInsensitiveCompare:)];
+//    
+//    [myMutableTodoList sortUsingDescriptors:@[sortDescriptor]];
+//    
+//    NSLog(@"Sorted Array Object 0: %@", myMutableTodoList[0]);
+//    NSLog(@"Sorted Array Object 1: %@", myMutableTodoList[1]);
+//    NSLog(@"Sorted Array object 2: %@", myMutableTodoList[2]);
+//    NSLog(@"Sorted Array object 3: %@", myMutableTodoList[3]);
+    
+//    //Sorting number
+//    NSMutableArray *luckyLotto = [@[@(38), @(21), @(42), @(13), @(6), @(29), @(11)] mutableCopy];
+//    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:nil ascending:NO];
+//    [luckyLotto sortUsingDescriptors:@[sortDescriptor]];
+//    
+//    NSLog(@"Lucky lotto number 1: %ld", [luckyLotto[0] longValue]);
+//    NSLog(@"Lucky lotto number 2: %ld", [luckyLotto[1] longValue]);
+//    NSLog(@"Lucky lotto number 3: %ld", [luckyLotto[2] longValue]);
+//    NSLog(@"Lucky lotto number 4: %ld", [luckyLotto[3] longValue]);
+//    NSLog(@"Lucky lotto number 5: %ld", [luckyLotto[4] longValue]);
+//    NSLog(@"Lucky lotto number 6: %ld", [luckyLotto[5] longValue]);
+//    NSLog(@"Lucky lotto number 7: %ld", [luckyLotto[6] longValue]);
+
+    //Blocks
+//    NSMutableArray *luckyLotto = [@[@(38), @(21), @(42), @(13), @(6), @(29), @(11)] mutableCopy];
+//    [luckyLotto sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+//    NSString *string1 = (NSString *)obj1;
+//        NSString *string2 = (NSString *)obj2;
+//        
+//        if (string1.length < string2.length) {
+//            return NSOrderedAscending;
+//        } else if (string2.length < string1.length) {
+//            return NSOrderedDescending;
+//        }
+//        
+//        return NSOrderedSame;
+    
+//        NSNumber *numberA = (NSNumber *)obj1;
+//        NSNumber *numberB = (NSNumber *)obj2;
+
+//        int intValueA = [numberA intValue];
+//        int intValueB = [numberB intValue];
+//        
+//        if (intValueA > intValueB) {
+//            return NSOrderedAscending;
+//        } else if (intValueA < intValueB) {
+//            return NSOrderedDescending;
+//        }
+//        return NSOrderedSame;
+//    }];
+//    
+//    NSLog(@"Lucky lotto number 1: %ld", [luckyLotto[0] longValue]);
+//    NSLog(@"Lucky lotto number 2: %ld", [luckyLotto[1] longValue]);
+//    NSLog(@"Lucky lotto number 3: %ld", [luckyLotto[2] longValue]);
+//    NSLog(@"Lucky lotto number 4: %ld", [luckyLotto[3] longValue]);
+//    NSLog(@"Lucky lotto number 5: %ld", [luckyLotto[4] longValue]);
+//    NSLog(@"Lucky lotto number 6: %ld", [luckyLotto[5] longValue]);
+//    NSLog(@"Lucky lotto number 7: %ld", [luckyLotto[6] longValue]);
+    
+    
+    //Arrary iteration
+    NSMutableArray *myMutableTodoList = [@[@"Clean the house",
+                                           @"Feed the dog",
+                                           @"Take out the trash",
+                                           @"Fight crime"] mutableCopy];
+    
+//    for (NSInteger idx = 0; idx < myMutableTodoList.count; idx++) {
+//        NSLog(@"Task %ld: %@", idx, myMutableTodoList[idx]);
 //    }
-//    NSLog(@"The factorial of %ld is %ld", (long)n, (long)nFactorial);
+
     
-    
-//    NSInteger n = 5;
-//    NSInteger nFactorial = n;
-//    while (n > 1) {
-//        nFactorial = nFactorial * --n;
+    //Fast enumeration
+//    for (NSString *task in myMutableTodoList) {
+//        NSLog(@"Do this: %@", task);
 //    }
-//    NSLog(@"The factorial of %ld is %ld", (long)n, (long)nFactorial);
-//    
     
-//    NSInteger n = 5;
-//    NSInteger nFactorial;
-//    //Find the factorial
-//    
-//    nFactorial = n;
-//        //At this point, n == 5 and nFactorial == 5
-//    nFactorial = nFactorial * --n;
-//        //The above line subtracts 1 from n, then multiplies nFactorial by the new n.
-//        //Here, n == 4 and nFactorial == 20
-//    nFactorial = nFactorial * --n;
-//        //Now n === 3 and nFactorial == 60
-//    nFactorial = nFactorial * --n;
-//        // n == 2 and nFactorial == 120
-//    nFactorial = nFactorial * --n;
-//        // n == 1 and nFactorial == 120
-//    NSLog(@"The factorial of %ld is %ld", (long) n, (long) nFactorial);
-//    
+//    [myMutableTodoList enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+//        NSString *task = (NSString *)obj;
+//        NSLog(@"Just doing a mild-mannered chore: %@", task);
+//        if (idx == 2) {
+//            *stop = YES;
+//        }
+//    }];
+    
+    
+    NSArray *characterNames = [NSArray arrayWithObjects:@"worf", @"picard", @"crusher", nil];
+    NSLog(@")
+    return characterNames[0];
+    
     return YES;
     
 }
